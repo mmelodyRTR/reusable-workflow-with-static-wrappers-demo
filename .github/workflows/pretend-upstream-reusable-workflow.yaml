@@ -8,5 +8,5 @@ jobs:
     runs-on: ubunutu-latest
     steps:
       - shell: bash
-        runs: |
+        run: |
           echo "I'm deploying from an upstream reusable workflow!"
