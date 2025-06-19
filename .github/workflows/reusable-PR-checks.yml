@@ -7,15 +7,18 @@ jobs:
   build:
     uses: ./.github/workflows/build-wrapper.yaml
   deploy:
+    needs: build
     uses: ./.github/workflows/deploy-wrapper.yaml
   test:
     runs-on: ubuntu-latest
+    needs: deploy
     steps:
       - shell: bash
         run: |
           echo "Testing!"
   validate:
     runs-on: ubuntu-latest
+    needs: test
     steps:
       - shell: bash
         run: |
