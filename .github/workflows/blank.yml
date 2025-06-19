@@ -1,0 +1,23 @@
+name: Sample Reusable Workflow w/ Static Wrapper Steps
+
+on:
+  workflow_call:
+
+jobs:
+  build:
+    uses: ./.github/workflows/build-wrapper.yaml
+  deploy:
+    uses: ./.github/workflows/deploy-wrapper.yaml
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - shell: bash
+        run: |
+          echo "Testing!"
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - shell: bash
+        run: |
+          echo "Valid!"
+      
