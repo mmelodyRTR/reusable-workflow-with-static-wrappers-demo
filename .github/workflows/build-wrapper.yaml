@@ -1,0 +1,9 @@
+name: build wrapper
+
+on:
+  workflow_call:
+
+jobs:
+  build:
+    uses: ./.github/workflows/actual-build.yaml
+
