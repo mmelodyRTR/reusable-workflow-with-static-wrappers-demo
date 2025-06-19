@@ -1,0 +1,14 @@
+name: actual deploy
+
+on:
+  workflow_call:
+
+jobs:
+  notification:
+    runs-on: ubunutu-latest
+    steps:
+      - shell: bash
+        run: |
+          echo "I'm going to call another upstream reusable workflow for deploying!"
+  deploy:
+    uses: ./.github/workflows/pretend-upstream-reusable-workflow.yaml

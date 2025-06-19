@@ -1,0 +1,12 @@
+name: Upstream deployer
+
+on:
+  workflow_call:
+
+jobs:
+  deploy:
+    runs-on: ubunutu-latest
+    steps:
+      - shell: bash
+        runs: |
+          echo "I'm deploying from an upstream reusable workflow!"

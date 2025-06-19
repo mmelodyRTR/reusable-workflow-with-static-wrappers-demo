@@ -1,0 +1,8 @@
+name: deploy wrapper
+
+on:
+  workflow_call:
+
+jobs:
+  deploy-wrap:
+    uses: ./.github/workflows/actual-deploy.yaml

@@ -1,0 +1,12 @@
+name: actual build
+
+on:
+  workflow_call:
+
+jobs:
+  build:
+    runs-on: ubunutu-latest
+    steps:
+      - shell: bash
+        run: |
+          echo "I'm buidling!"

@@ -4,6 +4,5 @@ on:
   workflow_call:
 
 jobs:
-  build:
+  build-wrap:
     uses: ./.github/workflows/actual-build.yaml
-
